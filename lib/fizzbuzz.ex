@@ -29,10 +29,10 @@ defmodule Fizzbuzz do
 
 
 """
+@fizzbuzz_mock Application.get_env(:fizzbuzz, :fizzbuzz_mock)
 
   def run_fizzbuzz(num) do
-    cond do
+    @fizzbuzz_mock.get_result(5)
 
-    end
   end
 end
