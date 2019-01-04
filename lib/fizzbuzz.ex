@@ -30,9 +30,19 @@ defmodule Fizzbuzz do
 
 """
 @fizzbuzz_mock Application.get_env(:fizzbuzz, :fizzbuzz_mock)
+@behavior Fizzbuzz.FizzbuzzApi
 
-  def run_fizzbuzz(num) do
-    @fizzbuzz_mock.get_result(5)
+  # def run_fizzbuzz(num) do
+  #   cond do
+  #     rem(num, 15) == 0 -> "Fizzbuzz"
+  #     rem(num, 5) == 0 -> "Buzz"
+  #     rem(num, 3) == 0 -> "Fizz"
+  #     true -> num
+  #  end
 
+  # end
+
+  def run_fizxbuzz_api(num) do
+    @fizzbuzz_mock.get_result(num)
   end
 end
